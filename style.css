@@ -202,10 +202,6 @@ body {
   #footer {
     margin-bottom: 60px !important;
   }
-  .why-card {
-    height: auto !important;
-    width: 100vw !important;
-  }
   .blue-head h3 {
     font-size: 24px;
     font-weight: var(--fwbold);
@@ -214,5 +210,11 @@ body {
   }
   .blue-head p {
     max-width: 64.6%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .why-card {
+    height: auto !important;
+    width: 100vw !important;
   }
 }
