@@ -50,6 +50,9 @@ body {
 .pt-37 {
   padding-top: 37px;
 }
+.pbt-69 {
+  padding: 69px 0;
+}
 /* font style */
 .big-header {
   font-size: 36px;
@@ -144,25 +147,25 @@ body {
 }
 
 /* TESTIMONIAL */
-.person-img {
-  width: 80px;
-  height: 80px;
-}
 .testi-card {
-  width: 619px;
-  height: 270px;
   flex-shrink: 0;
   border-radius: 8px;
   background: #f1f3ff;
   box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
 }
-.testi-card div {
-  max-width: 415px;
+#testi-button button {
+  border: unset;
+  padding: 0 12px;
+  background-color: unset;
 }
-.testi-container {
-  margin-left: -241px;
+#testi-button button:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
 }
-
+#testi-button button:active {
+  transform: scale(1);
+  transition: all 0.3s ease;
+}
 /* BLUEbox */
 .blue-head {
   color: var(--neutral01);
@@ -181,11 +184,22 @@ body {
   border: 1px solid #d4d4d4;
   background: #fff;
 }
-
 /* responsive */
 @media screen and (min-width: 992px) {
   .toggle-button {
     display: none;
+  }
+  .testi-card {
+    padding: 69px 0;
+  }
+  #footer {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .testi-card {
+    padding: 40px 0;
   }
 }
 @media screen and (max-width: 768px) {
