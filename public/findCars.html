@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Sabrina" />
+  <meta name="description" content="Lorem ipsum dolor sit amet" />
+  <meta name="viewport"
+    content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+  <title>Binar Rent Car</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+
+  <!-- Example CSS -->
+  <link href="./css/style.example.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <section id="overlay" class="overlay none"></section>
+  <header class="navigation-bar max-body mx-auto">
+    <nav class="navbar navbar-expand-lg nav-bg-color pt-4 pb-0 pb-md-3 ">
+      <div class="container max-content px-3 px-sm-3 px-xl-0">
+        <a class="navbar-brand" href="#"><img src="./assets/logo.png" alt="logo"></a>
+        <button class="toggle-button " href="#offcanvasExample" role="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <img src="./assets/fi_menu.svg" alt="toogle-icon">
+        </button>
+
+        <div class="offcanvas offcanvas-end flex-grow-0" style="max-width: 50% !important;" tabindex="-1"
+          id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header pb-2">
+            <h5 class="offcanvas-title body-bold" id="offcanvasExample">BCR</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body end-0 pt-0">
+            <ul class="navbar-nav me-0">
+              <li class="nav-item mx-0 me-lg-2">
+                <a class="nav-link body-regular" href="#our-service">Our Service</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-2">
+                <a class="nav-link body-regular" href="#why-us">Why Us</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-2">
+                <a class="nav-link body-regular" href="#testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item mx-0 mx-lg-2">
+                <a class="nav-link body-regular" href="#faq">FAQ</a>
+              </li>
+            </ul>
+            <button class="button-s mx-0 ms-lg-2">Register</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- HERO -->
+  <section id="hero" class="nav-bg-color h-100 max-body mx-auto">
+    <div class="container-fluid pt-21 px-0">
+      <div id="heroContent" class="row row-gap-4 ms-3 me-0 mx-md-0">
+        <div class="col-lg-5 align-self-center offset-xl-1 px-0 ps-md-3">
+          <h1 class="big-header">
+            Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)
+          </h1>
+          <p class="body-light hero-p mt-2">
+            Selamat datang di Binar Car Rental. Kami menyediakan mobil
+            kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+            untuk sewa mobil selama 24 jam.
+          </p>
+        </div>
+        <div class="col-lg-6 px-0 ps-lg-3 offset-xl-0 offset-lg-1 ">
+          <img src="./assets/img_car.png" alt="car" class="img-fluid float-end">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FILTER CONTAINER -->
+  <section id="filter-container" class="mx-auto container ">
+    <div id="form-container">
+      <form action="" class="d-flex pb-3" id="filter-form">
+        <!-- DIVER TYPE -->
+        <div class="input-title">
+          <p class="mb-1">Tipe Driver</p>
+          <div id="driver-type" class="input-box">
+            <p class="m-0 input-content" id="selected-driver">Pilih Tipe Driver</p>
+            <img src="images/fi_chevron-down.svg" alt="" id="arrowIcon">
+          </div>
+          <div class="option-container">
+            <ul id="driver-list" class="p-0 hide">
+              <li class="options">
+                <p>Dengan Sopir</p>
+              </li>
+              <li class="options">
+                <p>Tanpa Sopir (Lepas kunci)</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- CALENDAR -->
+        <div class="calendar-container">
+          <div class="input-title">
+            <p class="mb-1">Tanggal</p>
+            <div class="input-box" id="calendarInput">
+              <p class="input-content" id="inputDate">Pilih Tanggal</p>
+              <img src="images/fi_calendar.svg" alt="">
+            </div>
+          </div>
+          <div class="calendar hide" id="calendar">
+            <div class="calendar-header">
+              <button id="prevBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                  <path d="M21.1183 12H5.55762" stroke="#151515" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M13.3379 19L5.55762 12L13.3379 5" stroke="#151515" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="monthYear" id="monthYear"></div>
+              <button id="nextBtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+                  <path d="M5.88232 12H21.443" stroke="#151515" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M13.6626 5L21.4429 12L13.6626 19" stroke="#151515" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="days">
+              <div class="day">Mon</div>
+              <div class="day">Tue</div>
+              <div class="day">Wed</div>
+              <div class="day">Thu</div>
+              <div class="day">Fri</div>
+              <div class="day">Sat</div>
+              <div class="day">Sun</div>
+            </div>
+            <div class="dates" id="dates"></div>
+            <button type="button" id="calendarBtn" class="button-s">Pilih Tanggal</button>
+          </div>
+        </div>
+        <!-- WAKKTU JEMPUT -->
+        <div class="input-title">
+          <p class="mb-1">Waktu Jemput/Ambil</p>
+          <div id="pickupTime" class="input-box">
+            <p class="m-0 input-content" id="selectedTime">Pilih Waktu</p>
+            <img src="images/fi_chevron-time.svg" alt="" id="arrowIcon">
+          </div>
+          <div class="option-container">
+            <ul id="timeList" class="p-0 hide time-list">
+              <li class="options d-flex justify-content-between">
+                <p>08.00</p>
+                <P>WIB</P>
+              </li>
+              <li class="options d-flex justify-content-between">
+                <p>09.00</p>
+                <P>WIB</P>
+              </li>
+              <li class="options d-flex justify-content-between">
+                <p>10.00</p>
+                <P>WIB</P>
+              </li>
+              <li class="options d-flex justify-content-between">
+                <p>11.00</p>
+                <P>WIB</P>
+              </li>
+              <li class="options d-flex justify-content-between">
+                <p>12.00</p>
+                <P>WIB</P>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- KAPASITAS PENUMPANG -->
+        <div class="input-title">
+          <p class="mb-1">Jumlah Penumpang (optional)</p>
+          <div class="input-box">
+            <input type="number" class="input-content" name="passenger" id="passenger" value=""
+              placeholder="Jumlah Penumpang">
+            <img src="images/fi_passenger.svg" alt="" id="arrowIcon">
+          </div>
+        </div>
+        <button id="findCarBtn" type="button" class="button-s" disabled>Cari Mobil</button>
+      </form>
+    </div>
+  </section>
+  <!-- CARD CONTAINER -->
+  <section id="cars-container" class="mx-auto container cars-container p-0">
+    <div class="cards-container" id="cardsContainer">
+    </div>
+  </section>
+  <!-- FOOTER -->
+  <section id="footer" class="max-body mx-auto mb-100">
+    <div class="container max-content p-3 p-xl-0">
+      <div class="row justify-content-between m-0 row-gap-3">
+        <div class="col-sm-3 p-0">
+          <p class="body-light">Jalan Suroyo No. 161 Mayangan Kota<br> Probolonggo 672000</p>
+          <p class="body-light">
+            binarcarrental@gmail.com
+          </p>
+          <p class="body-light mb-0">
+            081-233-334-808
+          </p>
+        </div>
+        <div class="col-sm-1 p-0">
+          <p class="body-regular">Our Service</p>
+          <p class="body-regular">Why us</p>
+          <p class="body-regular">Testimoial</p>
+          <p class="body-regular mb-0">FAQ</p>
+        </div>
+        <div class="col-sm-3 p-0">
+          <p class="body-light">Conect with us</p>
+          <div class="d-flex flex-wrap row-gap-3 column-gap-3">
+            <img src="./assets/icon_facebook.png" alt="facebook">
+            <img src="./assets/icon_instagram.png" alt="instagram">
+            <img src="./assets/icon_twitter.png" alt="icon_twitter">
+            <img src="./assets/icon_mail.png" alt="mail">
+            <img src="./assets/icon_twitch.png" alt="twitch">
+          </div>
+        </div>
+        <div class="col-sm-3 p-0">
+          <p class="body-light">Copyright Binar 2022</p>
+          <img src="https://i.ibb.co/mDD1YMy/logo.png" alt="Logo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Example Javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous">
+    </script>
+  <script type="text/javascript" src="./scripts/binar.js"></script>
+  <script type="text/javascript" src="./scripts/app.example.js"></script>
+  <script type="text/javascript" src="./scripts/car.example.js"></script>
+  <script type="text/javascript" src="./scripts/main.example.js"></script>
+
+
+</body>
+
+</html>
