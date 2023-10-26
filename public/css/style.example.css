@@ -371,7 +371,7 @@ select {
 .overlay {
   width: 100vw;
   height: 1034px;
-  position: absolute;
+  position: fixed;
   background: rgba(0, 0, 0, 0.6);
   z-index: 5;
   transition: 0.3s;
