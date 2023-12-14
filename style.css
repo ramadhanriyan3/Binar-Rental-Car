@@ -184,6 +184,9 @@ body {
   border: 1px solid #d4d4d4;
   background: #fff;
 }
+.accordion {
+  --bs-accordion-bg: unset;
+}
 /* responsive */
 @media screen and (min-width: 992px) {
   .toggle-button {
